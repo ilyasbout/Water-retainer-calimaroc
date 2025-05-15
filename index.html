@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>Water Retainer Maroc</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.png">
+</head>
+<body>
+<header>
+  <img src="banner.jpg" alt="Water Retainer" style="width:100%;max-height:200px;object-fit:cover;">
+  <h1>Water Retainer Maroc</h1>
+  <nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">الاستعمال</a>
+    <a href="#">الجرعة</a>
+    <a href="#">المزايا</a>
+    <a href="#">تواصل</a>
+  </nav>
+</header>
+<main>
+  <section>
+    <h2>شنو هو Water Retainer؟</h2>
+    <p>منتوج طبيعي كيقلل التبخر ويزيد الرطوبة باش النباتات تواجه الجفاف.</p>
+  </section>
+  <section>
+    <h2>طريقة الاستعمال</h2>
+    <ul>
+      <li>الرش قبل أو بعد الزرع</li>
+      <li>2–4 مل/م² ثم كل 45 يوم</li>
+    </ul>
+  </section>
+  <section>
+    <h2>حاسبة الجرعة التفاعلية</h2>
+    <label>نوع الزرع:</label>
+    <select id="mode" onchange="toggleMode()">
+      <option value="ligne">خطوط</option>
+      <option value="arbre">أشجار</option>
+    </select>
+    <div id="fields-ligne">
+      <label>عدد الخطوط:</label><input id="n" type="number">
+      <label>طول الخط (م):</label><input id="l" type="number">
+      <label>المسافة بين الخطوط (م):</label><input id="m" type="number">
+    </div>
+    <div id="fields-arbre" style="display:none">
+      <label>عدد الأشجار:</label><input id="trees" type="number">
+      <label>مساحة شجرة واحدة (م²):</label><input id="areaTree" type="number" value="7">
+    </div>
+    <label>جرعة (مل/م²):</label><input id="dose" type="number" value="2">
+    <button class="btn" onclick="calc()">احسب</button>
+    <div id="out" class="example" style="display:none"></div>
+  </section>
+  <section>
+    <h2>العمليات الرياضية لحساب الجرعة</h2>
+    <div class="example"><h3>1. خطوط:</h3>
+      <p>S = N × L × M → مثال: 200 × 20 × 1.5 = 6000m²</p>
+      <p>الجرعة: 6000 × 2ml = 12L</p>
+    </div>
+    <div class="example"><h3>2. أشجار:</h3>
+      <p>S = π/4 × D₁ × D₂ → مثال: 3.14/4 × 1.15 × 2 ≈ 7m²</p>
+      <p>490 شجرة × 14ml = 6860ml ≈ 6.9L</p>
+    </div>
+    <div class="example"><h3>3. حسب الشوالات:</h3>
+      <ul>
+        <li>45 شجرة ≈ 1L</li>
+        <li>3 شوالات ≈ 3L</li>
+        <li>6 شوالات ≈ 6L</li>
+        <li>9 شوالات ≈ 9L</li>
+      </ul>
+    </div>
+  </section>
+  <section>
+    <h2>مزايا Water Retainer</h2>
+    <ul>
+      <li>توفير حتى 50% من الماء</li>
+      <li>تحسين نمو الجذور</li>
+      <li>رفع الإنتاجية وسط الجفاف</li>
+      <li>آمن وخالي من المواد السامة</li>
+    </ul>
+  </section>
+  <section>
+    <h2>تواصل معنا</h2>
+    <ul>
+      <li>الهاتف: <strong>0662640145</strong></li>
+      <li>الإيميل: <a href="mailto:Ilyas.Boutamart20@gmail.com">Ilyas.Boutamart20@gmail.com</a></li>
+      <li><a class="btn" href="https://wa.me/212662640145" target="_blank">واتساب</a></li>
+    </ul>
+  </section>
+
+<section>
+  <h2>شركاؤنا في المغرب</h2>
+  <ul>
+    <li>Calimaroc – الموزع الرسمي في جهة الغرب</li>
+    <li>ProtectAgri – شريك استراتيجي في التجارب</li>
+    <li>AgriTech Maroc – الدعم التقني والتكوين</li>
+  </ul>
+</section>
+
+</main>
+<footer><p>© 2025 - Water Retainer Maroc | تم التطوير من طرف Calimaroc</p></footer>
+<script src="script.js"></script>
+</body>
+</html>
